@@ -18,7 +18,6 @@ export default class LoginForm extends Component {
 	}
 
 	onChangeEmailText = (text) => {
-		console.log(validator.validateEmail(text))
 		if (!validator.validateEmail(text)) {
 			this.setState({ 
 				showEmailError: true,
@@ -33,7 +32,6 @@ export default class LoginForm extends Component {
 	}
 
 	onChangePasswordText = (text) => {
-		console.log(validator.validatePassword(text))
 		if (!validator.validatePassword(text)) {
 			this.setState({ 
 				showPasswordError: true,

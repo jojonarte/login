@@ -1,12 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, AppRegistry } from 'react-native';
+import LoginScreen from './app/screens/LoginScreen';
 
 export default class App extends React.Component {
+ 
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <LoginScreen />
     );
   }
 }
@@ -18,4 +19,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+});  

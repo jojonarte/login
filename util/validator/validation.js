@@ -1,0 +1,1 @@
+export const isEmpty = (input) => {	return input === undefined || 		input === null || 		input.length == 0 }export const isValidEmail = (input) => {	return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input)}export const isValidPassword = (input) => {	return input != null &&		 input != undefined && 		 input.length >= 6 && 		 input.length <= 12}

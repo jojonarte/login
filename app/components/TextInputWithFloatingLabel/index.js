@@ -8,7 +8,9 @@ type Props = {
 	containerStyle: mixed,
 	textInputStyle: mixed,
 	labelStyle: mixed,
+ 	textInputProps: mixed,	
 	hint: string,
+	errorLabel: string
 }
 
 export default class TextInputWithFloatingLabel extends Component {
@@ -17,7 +19,8 @@ export default class TextInputWithFloatingLabel extends Component {
 		textInputStyle: ViewPropTypes.style,
 		labelStyle: ViewPropTypes.style,
 		hint: PropTypes.string,
-		placeholder: PropTypes.string
+		placeholder: PropTypes.string,
+		errorLabel: PropTypes.string
 	};
 
 	constructor(props) {
@@ -38,7 +41,11 @@ export default class TextInputWithFloatingLabel extends Component {
 			        onChangeText={(text) => this.setState({text})}
 		        	value={this.state.text}
 		        	placeholder={this.props.placeholder}
-		      />
+		        	{...this.props.textInputProps}
+		      	/>
+		      	<Text style={[styles.errorLabel]} >
+		      		{this.props.errorLabel}
+		      	</Text>
 			</View>
 			
 		);

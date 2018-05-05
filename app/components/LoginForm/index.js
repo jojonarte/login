@@ -57,6 +57,14 @@ export default class LoginForm extends Component {
 			return;
 		}
 		
+		alert(
+        'Login Success',
+        'YAY!',
+        [
+          { text: 'OK', onPress: () => console.log('ok') }
+        ],
+        { cancelable: false }
+      )
 	}
 
 	render () {

@@ -7,6 +7,7 @@ const logo = require('./images/logo.png')
 const Logo = () => (
 	<View style={styles.container}>
 		<Image 
+			style={styles.logoImage}
 			resizeMode='contain'
 			source={logo} 
 		/>

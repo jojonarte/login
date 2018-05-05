@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { View, Button } from 'react-native'
+import { View } from 'react-native'
 
 import { TextInputWithFloatingLabel } from '../../components/TextInputWithFloatingLabel';
+import { CustomButton } from '../../components/Button';
 
 import styles from './styles';
 import { validator } from '../../../util/validator'
@@ -45,9 +46,9 @@ export default class LoginForm extends Component {
 		});
 	}
 
-	// _onPressed() {
-	// 	console.log('pressed')
-	// }
+	_onPressed() {
+		console.log('pressed')
+	}
 
 	render () {
 		return (
@@ -72,6 +73,10 @@ export default class LoginForm extends Component {
 		          showError={this.state.showPasswordError}
 	              secureTextEntry
 		        />
+				<CustomButton 
+				  title="Sign In"
+				  onPress={this._onPressed}
+				/>
 	      </View>
 		);
 	}

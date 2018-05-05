@@ -1,24 +1,38 @@
-import { StyleSheet } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
-export default StyleSheet.create({
+const INPUT_HEIGHT = 72;
+const BORDER_RADIUS = 4;
+const BORDER_WIDTH = 1;
+
+export default EStyleSheet.create({
 	container: { 
-		// flex: 1, 
+		width: '100%',
+		backgroundColor: '$primaryColor',
+		height: INPUT_HEIGHT,
+		marginVertical: 16
 	},
 	textInputLabel: {
-		// flex: 2,
 		fontSize: 12,
 	},
 	textInputField: {
-		// flex: 4,
-		height: 32,
+		flex: 1,
+		flexDirection: 'row',
 		borderColor: '#714DB1',
-		backgroundColor: 'white',
-		borderWidth: 1,
-		borderRadius: 4,
+		borderWidth: BORDER_WIDTH,
+		borderRadius: BORDER_RADIUS,
+		fontWeight: '300',
+		fontSize: 18,
+		paddingLeft: 10,
+		fontStyle: 'normal'
+	},
+	textInputFieldPlaceholder: {
+		fontStyle: 'italic'
 	},
 	errorLabel: {
-		// flex: 1,
-		color: 'red'
+		color: 'red',
+		fontWeight: '200',
+		fontSize: 10,
+		fontStyle: 'italic' 
 	}
 
 });

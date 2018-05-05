@@ -7,10 +7,10 @@ import styles from './styles';
 
 const Container = ({children}) => (
 	<TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-	    <View style={styles.container}>
-	      {children}
-	    </View>
-	</TouchableWithoutFeedback>
+	    <View style={styles.container} >
+	      	{children}
+      	</View>
+    </TouchableWithoutFeedback>
 );
 
 Container.propTypes = {

@@ -4,11 +4,13 @@ import { Dimensions } from 'react-native';
 const BOX_SIZE = Dimensions.get('window').height / 3
 
 export default EStyleSheet.create({
+	$largeLogoSize: BOX_SIZE,
+	$scaledDownLogoSize: BOX_SIZE / 2,
 	container: {
 		alignItems: 'center',
 	},
 	logoImage: {
-		height: BOX_SIZE,
-		width: BOX_SIZE
+		height: '$largeLogoSize',
+		width: '$largeLogoSize'
 	}
 });

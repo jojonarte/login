@@ -58,13 +58,13 @@ export default class LoginForm extends Component {
 		}
 		
 		alert(
-        'Login Success',
-        'YAY!',
-        [
-          { text: 'OK', onPress: () => console.log('ok') }
-        ],
-        { cancelable: false }
-      )
+	        'Login Success',
+	        'YAY!',
+	        [
+	          { text: 'OK', onPress: () => console.log('ok') }
+	        ],
+	        { cancelable: false }
+      	)
 	}
 
 	render () {

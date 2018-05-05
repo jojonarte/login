@@ -46,8 +46,17 @@ export default class LoginForm extends Component {
 		});
 	}
 
-	_onPressed() {
-		console.log('pressed')
+	_onPressed = () => {
+		console.log('validating...');
+		const { showEmailError, showPasswordError, email, password} = this.state;
+
+		this.onChangeEmailText(email);
+		this.onChangePasswordText(password);
+
+		if (!validator.validateEmail(email) || !validator.validatePassword(password)) {
+			return;
+		}
+		
 	}
 
 	render () {

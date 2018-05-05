@@ -31,7 +31,7 @@ export default class Logo extends Component {
 		let showListenerKey = 'keyboardWillShow';
 		let hideListenerKey = 'keyboardWillHide';
 
-		if (Platform.OS === 'andriod') {
+		if (Platform.OS === 'android') {
 			showListenerKey = 'keyboardDidShow';
 			hideListenerKey = 'keyboardDidHide';
 		}

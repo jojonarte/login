@@ -5,8 +5,6 @@ import LoginForm from '../../components/LoginForm';
 import { Container } from '../../components/Container';
 import { Logo } from '../../components/Logo';
 
-import { emailValidator, passwordValidator } from '../../../util/validator'
-
 export default () => (
 	<Container>
 		<StatusBar translucent={false} barStyle="light-content"/>

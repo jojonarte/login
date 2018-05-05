@@ -2,20 +2,50 @@ import React, { Component } from 'react';
 import { View, Button } from 'react-native'
 
 import { TextInputWithFloatingLabel } from '../../components/TextInputWithFloatingLabel';
+
 import styles from './styles';
+import { validator } from '../../../util/validator'
 
 export default class LoginForm extends Component {
 	constructor() {
 	    super();
 	    this.state = {
 	      email: '',
-	      password: ''
+	      password: '',
+	      showEmailError: false,
+	      showPasswordError: false
 	    };
 	}
 
-	onChangeEmailText = text => this.setState({ email: text });
+	onChangeEmailText = (text) => {
+		console.log(validator.validateEmail(text))
+		if (!validator.validateEmail(text)) {
+			this.setState({ 
+				showEmailError: true,
+				email: text
+			});
+			return;
+		}
+		this.setState({ 
+			showEmailError: false,
+			email: text
+		});
+	}
 
-	onChangePasswordText = text => this.setState({ password: text });
+	onChangePasswordText = (text) => {
+		console.log(validator.validatePassword(text))
+		if (!validator.validatePassword(text)) {
+			this.setState({ 
+				showPasswordError: true,
+				password: text
+			});
+			return;
+		}
+		this.setState({ 
+			showPasswordError: false,
+			password: text
+		});
+	}
 
 	// _onPressed() {
 	// 	console.log('pressed')
@@ -31,6 +61,7 @@ export default class LoginForm extends Component {
 		          keyboardType='email-address'
 		          value={this.state.email}
 		          onChangeText={this.onChangeEmailText}
+		          showError={this.state.showEmailError}
 	              autoCapitalize='none'
 		        />
 		        <TextInputWithFloatingLabel 
@@ -39,6 +70,8 @@ export default class LoginForm extends Component {
 		          errorLabel='please use at least 6-12 characters'
 		          value={this.state.password}
 		          onChangeText={this.onChangePasswordText}
+		          maxLength={12}
+		          showError={this.state.showPasswordError}
 	              secureTextEntry
 		        />
 	      </View>

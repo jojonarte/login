@@ -1,6 +1,6 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-const INPUT_HEIGHT = 72;
+const INPUT_HEIGHT = 64;
 const BORDER_RADIUS = 4;
 const BORDER_WIDTH = 1;
 
@@ -9,7 +9,6 @@ export default EStyleSheet.create({
 		width: '100%',
 		backgroundColor: '$primaryColor',
 		height: INPUT_HEIGHT,
-		marginVertical: 16
 	},
 	textInputLabel: {
 		fontSize: 12,

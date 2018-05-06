@@ -1,4 +1,5 @@
 # Clean React Native Login
+This app was built using Expo. This serves as a practice and demo.
 
 # Usage 
 ## Prerequisites before using:

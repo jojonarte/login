@@ -13,6 +13,9 @@ export default EStyleSheet.create({
 		height: BUTTON_HEIGHT,
 		marginVertical: 16
 	},
+	disabledContainer: {
+		backgroundColor: '$lighterPurple'
+	},
 	text: {
 		color: '$whiteColor',
 		fontWeight: 'bold',

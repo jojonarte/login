@@ -7,7 +7,8 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 EStyleSheet.build({
 	$primaryPurple: '#714DB1',
   	$primaryColor: '#FFF',
-  	$whiteColor: '#FFF'
+  	$whiteColor: '#FFF',
+  	$lighterPurple: '#BE90D4',
 })
 
 export default () => <LoginScreen style={styles.container}/>;

@@ -8,9 +8,9 @@ import { Logo } from '../../components/Logo';
 export default () => (
 	<Container>
 		<StatusBar translucent={true} barStyle="light-content"/>
-      	<KeyboardAvoidingView behavior="padding" style={{width: '100%', alignItems: 'center' }}>
-	      	<Logo />
-		    <LoginForm />
-	    </KeyboardAvoidingView>
+      		<KeyboardAvoidingView behavior="padding" style={{width: '100%', alignItems: 'center' }}>
+			<Logo />
+			<LoginForm />
+	    	</KeyboardAvoidingView>
 	</Container>
 );

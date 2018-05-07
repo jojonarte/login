@@ -60,9 +60,6 @@ export default class LoginForm extends Component {
 		Keyboard.dismiss();
 		const { email, password} = this.state;
 
-		this.onChangeEmailText(email);
-		this.onChangePasswordText(password);
-
 		if (!validator.validateEmail(email) || !validator.validatePassword(password)) {
 			return;
 		}
@@ -78,6 +75,7 @@ export default class LoginForm extends Component {
 	}
 
 	render () {
+		console.log('render')
 		return (
 			<View style={styles.container}>
 		        <TextInputWithFloatingLabel 

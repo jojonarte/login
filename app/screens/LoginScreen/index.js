@@ -7,7 +7,7 @@ import { Logo } from '../../components/Logo';
 
 export default () => (
 	<Container>
-      	<KeyboardAvoidingView behavior="padding" style={{width: '100%', alignItems: 'center' }}>
+		<KeyboardAvoidingView behavior="padding" style={{width: '100%', alignItems: 'center' }}>
 	      	<Logo />
 		    <LoginForm />
 	    </KeyboardAvoidingView>
